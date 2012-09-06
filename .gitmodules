@@ -1,0 +1,3 @@
+[submodule "externals/LuaD"]
+	path = externals/LuaD
+	url = git://github.com/JakobOvrum/LuaD.git

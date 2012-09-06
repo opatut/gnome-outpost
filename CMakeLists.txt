@@ -12,6 +12,11 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 include_directories(
     ${CMAKE_BINARY_DIR}
     ${CMAKE_SOURCE_DIR}
+    "externals/LuaD/"
+)
+
+link_directories(
+    ${CMAKE_SOURCE_DIR}/externals/LuaD/lib/
 )
 
 file(GLOB_RECURSE SOURCES src/*.d)
@@ -20,3 +25,7 @@ add_executable(gnome-outpost
     ${SOURCES}
 )
 
+target_link_libraries(gnome-outpost
+    luajit-5.1
+    luad
+    )

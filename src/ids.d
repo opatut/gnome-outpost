@@ -9,7 +9,15 @@ enum Id {
     CREATURE,
     INTELLIGENT,
     HUMANOID,
-    NAME
+    NAME,
 
+    BODY,
+    BEHAVIOR,
+    PATHFINDER,
+    MOVING,
+    CONTAINER,
+    ITEMHANDLER,
+    HAULING,
+    ATTACKER,
+    LIVING
 }
-

@@ -1,0 +1,39 @@
+This is an example file for the raw format. Every line that does not start with a "[" will be ignored. Statements always span one line, and are contained within "[" and "]". Everything following the closing bracket is not interpreted.
+
+The DEFINE keyword starts an entity template definition. The definition ends with the END keyword.
+
+[DEFINE:CREATURE]
+    Indentation is useful to keep it readable, but not required.
+
+    A new component can be added using the component name:
+
+    [BODY]
+
+    After a component was added, it can be modified using the component call method:
+
+    [BODY:HEAD] (Now the body knows it should have a head)
+
+    The above component call will run the following D code:
+    bodyComponent.call([Argument(Id.HEAD)]);
+    The body component will add the head subcomponent.
+
+    If the component does not yet exist, it is created automatically.
+
+    [NAME:"gnome":"gnomes"]
+    
+    The above is equivalent to:
+
+    [NAME]
+    [NAME:"gnome":"gnomes"]
+
+    To remove a component, use the "-" prefix:
+
+    [-BODY] (the body component is being removed)
+
+[END]
+
+An entity template can copy another template by specifying a second parameter in DEFINE:
+
+[DEFINE:GNOME:CREATURE]
+    Gnome stuff goes here.
+[END]

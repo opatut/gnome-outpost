@@ -3,14 +3,14 @@ module entity;
 import ids;
 import util.parser;
 
-class Component {
+abstract class Component {
     const static int ID = Id.UNKNOWN;
 
-    void onInitialize(Entity entity) {}
-    void onDeinitialize(Entity entity) {}
-    void onUpdate(Entity entity) {}
+    void onInitialize(Entity entity);
+    void onDeinitialize(Entity entity);
+    void onUpdate(Entity entity);
 
-    void setArguments(Argument[] arguments) {}
+    void setArguments(Argument[] arguments);
 }
 
 class Entity {

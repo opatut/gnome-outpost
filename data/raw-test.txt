@@ -1,5 +1,39 @@
 This is an example file for the raw format, heavily inspired by the DF raw file format.
 
+[DEFINE:CREATURE]
+    The body of a creature will be further defined in the template, using component calls.
+    [BODY]
+
+    Component calls will look like this:
+    # [BODY:ADD:HEAD]
+    # [BODY:ADD:LEG:LEFT]
+    # [BODY:ADD:LEG:RIGHT]
+
+    Creatures can have behaviorial states.
+    [BEHAVIOR]
+
+    Pathfinder component to navigate the world.
+    [PATHFINDER]
+
+    Moves the entity itself around in the world. Can be filled by the [PATHFINDER].
+    [MOVING]
+
+    Can hold items.
+    [CONTAINER]
+
+    Can put items in containers (or itself).
+    [ITEMHANDLER]
+
+    Can carry items without taking them in the inventory.
+    [HAULING]
+
+    Can attack other entities (mainly other creatures).
+    [ATTACKER]
+
+    Can die.
+    [LIVING]
+[END]
+
 [DEFINE:GNOME:CREATURE]
 
     Intelligent creature. Can have tasks. 

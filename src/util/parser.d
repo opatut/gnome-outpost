@@ -110,12 +110,15 @@ class Parser {
     void parseLine() {
         auto line = next();
         if(line[0].type == Argument.Type.Id && line[0].idValue == Id.DEFINE) {
-            parseDefine(line[1].idValue, line[2].idValue);
+            if(line.length > 2)
+                parseDefine(line[1].idValue, line[2].idValue);
+            else
+                parseDefine(line[1].idValue, Id.UNKNOWN);
         }
     }
 
     void parseDefine(Id templateId, Id parentId) { 
-        // TODO: parent template
+        // TODO: parent template, if parentId != Id.UNKNOWN
         EntityTemplate tpl = new EntityTemplate;
 
         while(peek() !is null && peek()[0].idValue != Id.END) {

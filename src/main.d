@@ -1,10 +1,11 @@
+module main;
+
 import std.stdio;
 import luad.all;
+import util.parser;
 
 int main() {
-
-    LuaState lua = new LuaState;
-    lua.openLibs();
-    lua.doString("print('lol')");
+    Parser p = new Parser("data/raw-test.txt");
     return 0;
 }
+

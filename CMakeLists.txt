@@ -13,6 +13,7 @@ include_directories(
     ${CMAKE_BINARY_DIR}
     ${CMAKE_SOURCE_DIR}
     "externals/LuaD/"
+    "src/"
 )
 
 link_directories(

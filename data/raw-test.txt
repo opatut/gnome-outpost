@@ -1,0 +1,18 @@
+This is an example file for the raw format, heavily inspired by the DF raw file format.
+
+[DEFINE:GNOME:CREATURE]
+
+    Intelligent creature. Can have tasks. 
+
+    [INTELLIGENT]
+
+    Humanoid body shape.
+
+    [HUMANOID] 
+
+    The name of the creature.
+    Parameter 1: Singule unit name
+    Parameter 2: Multiple units name
+
+    [NAME:"gnome":"gnomes"]
+[END]
